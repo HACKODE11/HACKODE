@@ -1,9 +1,6 @@
 #!/bin/bash
 
 export WANDB_MODE=disabled
-# export CUDA_VISIBLE_DEVICES=0,1,2,3
-# Optionally set the cache for transformers
-# export TRANSFORMERS_CACHE='YOUR_PATH/huggingface'
 
 export model=$1 # llama2 or vicuna
 export setup=$2 # behaviors or strings
@@ -25,9 +22,7 @@ if [ $# -eq 3 ]; then
     echo "last_file: $last_file, new_file: $new_file"
     cp -r $new_file ${last_file}
 fi
-# for data_offset in 0 10 20 30 40 50 60 70 80 90   # control the begin of train data in csv file, use this can evaluate on all train data with 10 data per time.
-# for data_offset in 0
-# do
+
 lines=`cat ../../data/${setup}.csv | egrep -v '^\s*$' | wc -l`
 
 lines=$[lines-1]
