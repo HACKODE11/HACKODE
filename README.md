@@ -16,4 +16,4 @@ Please place the LLM's configuration file in [experiments/configs/](experiments/
 You can use the following command to generate the attack sequences.
 ```
 cd experiments/launch_scripts
-./run_gcg_individual.sh mistral references
+./gen_attack_seq.sh mistral references
