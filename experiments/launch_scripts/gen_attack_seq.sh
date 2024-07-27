@@ -59,7 +59,7 @@ do
     fi
 
     python -u ../main.py \
-        --config="../configs/individual_${model}.py" \
+        --config="../configs/${model}.py" \
         --config.attack=gcg \
         --config.train_data="../../data/${setup}.csv" \
         --config.result_prefix=$new_file \
