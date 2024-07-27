@@ -1,0 +1,3 @@
+### Instruction\n\n{{Instruction}}\n### Reference\n\n{{Context}}\n\n### user\n\n{{Query}}\n### Response\n\n
+### System Instruction\n\n{{Instruction}}\n\n### Human Input\n\nThe question is "{{Query}}". Please provide a concise and relevant answer to the query based on the following context. {{Context}} ### Assistant Response\n\n
+<Instruction>{{Instruction}}<\Instruction>\n\n <Reference>{{Context}}<\Reference>\n\n <Question>{{Query}}<\Question>\n\n <Answer>\n\n
